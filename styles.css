@@ -1,0 +1,60 @@
+/* Complete the CSS styling according to the provided design */
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    font-size: 35px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('images/gamblingtable.jpeg');
+    background-size: cover;
+    color: white;
+    font-weight: bold;
+
+}
+
+h1 {
+    color: goldenrod;
+}
+
+#message-el {
+    font-style: italic;
+}
+
+/* 3. Make sure that the two buttons have some space between
+    grid-template-rows: repeat(4, 1fr);
+    display: grid;
+each other when they are rendered out vertically */
+
+#buttons{
+    height: 100px;
+    display: grid;
+    gap: 5px;
+    padding: 25px;
+}
+
+button {
+    color: #016f32;
+    width: 150px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: none;
+    border-radius: 2px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: hsl(43, 74%, 40%);
+}
+
+button:active {
+    background: hsl(43, 74%, 65%);
+}
+
+
