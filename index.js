@@ -22,11 +22,9 @@ function getRandomCard() {
 
 function startGame() {
     isAlive = true;
-    // Generate two random numbes
     let card1 = getRandomCard();
     let card2 = getRandomCard();
 
-    // Re-assign the cards and sum variables so that the game can start
     cards = [card1, card2];
         
     sum = card1 + card2;
@@ -35,9 +33,7 @@ function startGame() {
 }
 
 function renderGame() {
-    //render our first and second card
     cardsEl.textContent = "Cards: ";
-    // need it to redner out all the cards
     for (let i = 0; i < cards.length; i++) {
         cardsEl.textContent += cards[i] + " ";
     }
