@@ -52,10 +52,15 @@ function renderGame() {
 }
 
 function newCard() {
-    let cardVal = getRandomCard();
-    sum += cardVal;
-    cards.push(cardVal);
-    renderGame();
+    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
+    if (isAlive === true && hasBlackJack === false) {
+        let cardVal = getRandomCard();
+        sum += cardVal;
+        cards.push(cardVal);
+        renderGame();
+    } else {
+        messageEl.textContent = "You can't draw a new card"
+    }
 }
 
 function newGame() {
