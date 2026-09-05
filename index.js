@@ -1,4 +1,3 @@
-// 2. Create the player object. Give it two keys, name and chips, and set their values
 let player = {
     name: "Diego",
     chips: 248
@@ -10,10 +9,8 @@ let hasBlackJack = false;
 let isAlive = false;
 let message = ""; 
 let messageEl = document.getElementById("message-el");
-// 3. Grab ahold of the player-el paragraph and store it in a variable called playerEl
 let playerEl = document.getElementById("player-el");
 
-// 4. Render the player's name and chips in playerEl
 playerEl.textContent += player.name + ": " + "$" + player.chips;
 
 let sumEl = document.getElementById("sum-el");
@@ -64,7 +61,6 @@ function renderGame() {
 }
 
 function newCard() {
-    // Only allow the player to get a new card if she IS alive and does NOT have Blackjack
     if (isAlive === true && hasBlackJack === false) {
         let cardVal = getRandomCard();
         sum += cardVal;
